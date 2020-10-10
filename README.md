@@ -1,2 +1,1 @@
-# template_repo
-A template repository
+# Study localization based on LSS priors

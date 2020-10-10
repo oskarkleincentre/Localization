@@ -3,7 +3,7 @@ import sys
 import os
 import re
 
-PACKAGENAME = 'package'
+PACKAGENAME = 'localization'
 packageDir = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                           PACKAGENAME)
 
@@ -26,12 +26,13 @@ print(genRequirements)
 setup(# package information
       name=PACKAGENAME,
       version=__version__,
-      description='simple template repo',
+      description='Study localization based on LSS priors',
       long_description=''' ''',
       # What code to include as packages
       packages=[PACKAGENAME],
-      packagedir={PACKAGENAME: 'package'},
+      packagedir={PACKAGENAME: 'localization'},
       # What data to include as packages
       include_package_data=True,
-      package_data={PACKAGENAME:['example_data/*.dat']}
+      package_data={PACKAGENAME:['example_data/*.dat']},
+      install_requires=['numpy', 'pandas', 'astropy', 'healpy']
      )
